@@ -237,8 +237,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const form = document.getElementById("customForm");
 
+    // ✅ If form does not exist, do nothing (important for other pages)
+    if (!form) return;
+
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); 
+        event.preventDefault(); // stop page refresh immediately
 
         const size = document.querySelector('input[name="size"]:checked');
         const flavor = document.getElementById("flavor").value;
@@ -246,11 +249,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!size || flavor === "" || date === "") {
             alert("Please fill all required details before placing your custom order.");
-        } else {
-            alert("Your custom cake request has been submitted successfully! 🎂");
-
-            form.reset(); 
+            return;
         }
+
+        alert("Your custom cake request has been submitted successfully! 🎂");
+
+        form.reset(); // reset after success
     });
 
 });
@@ -259,6 +263,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </body>
 
     </html>
+
 
 
 
