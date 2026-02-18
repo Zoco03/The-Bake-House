@@ -231,36 +231,31 @@ button a {
         </form>
     </div>
  <script>
-document.addEventListener("DOMContentLoaded", function() {
+document.getElementById("customsForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // stop page refresh
 
-    const form = document.getElementById("customForm");
+    const size = document.querySelector('input[name="size"]:checked');
+    const flavor = document.getElementById("flavor").value;
+    const date = document.getElementById("date").value;
 
-    // ✅ If form does not exist, do nothing (important for other pages)
-    if (!form) return;
+    // Check required fields
+    if (!size || flavor === "" || date === "") {
+        alert("Please fill all the required information before submitting.");
+        return;
+    }
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // stop page refresh immediately
+    // Success message
+    alert("We’re on it! Quality service for a quality treat 🎂");
 
-        const size = document.querySelector('input[name="size"]:checked');
-        const flavor = document.getElementById("flavor").value;
-        const date = document.getElementById("date").value;
-
-        if (!size || flavor === "" || date === "") {
-            alert("Please fill all required details before placing your custom order.");
-            return;
-        }
-
-        alert("Your custom cake request has been submitted successfully! 🎂");
-
-        form.reset(); // reset after success
-    });
-
+    // Reset form
+    this.reset();
 });
     
     </script>
     </body>
 
     </html>
+
 
 
 
