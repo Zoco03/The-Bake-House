@@ -1,0 +1,210 @@
+    <style>
+        body { 
+            background: WhiteSmoke; 
+            margin: 0; 
+            padding: 0;
+          
+        }
+        
+        .navbar {
+            background-color: coral;
+            padding: 20px;
+            display: flex;
+            justify-content: center; 
+            gap: 250px; 
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+            width: 90%; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+
+        .cake-card { 
+            background: white; 
+            border-radius: 12px; 
+            overflow: hidden;
+           
+        
+        }
+
+        .cake-card:hover { transform: translateY(-5px); }
+
+        .cake-card img { 
+            width: 100%; 
+            height: 250px; 
+            display: block;
+            object-fit: cover; 
+        }
+
+        .info { padding: 20px; text-align: center; }
+button {
+    display: block;     
+    margin: 40px auto;   
+    background-color: #e91e63;
+   border: none;
+    border-radius: 8px;
+}
+
+
+
+button a {
+    display: inline-block;
+    padding: 15px 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+    body { 
+            background: WhiteSmoke; 
+            margin: 0; 
+            padding: 0;
+           
+            color: #333;
+        }
+
+        
+        .navbar {
+            background-color: coral;
+            padding: 20px;
+            display: flex;
+            justify-content: center; 
+            gap: 250px; 
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .about-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-text { flex: 1; min-width: 300px; }
+        
+        .about-image { 
+            flex: 1; 
+            min-width: 300px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 { color: #e91e63; font-size: 2.5em; }
+        p { line-height: 1.6; font-size: 1.1em; color: #555; }
+
+       
+        .mission {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .mission-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .team-member { text-align: center; }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid coral;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        
+
+        .cta-container { text-align: center; padding: 40px; }
+    </style>
+    </head>
+<body>
+
+    <nav class="navbar">
+        <a href="Microproject sem2.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="custom.html">Custom Orders</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+     <section class="about-section">
+        <div class="about-text">
+            <h1>Our Sweet Story</h1>
+            <p>Started in a small home kitchen in 2026, <strong>The Bake House</strong> was born out of a passion for turning simple ingredients into extraordinary memories.</p>
+            <p>Every cake we bake is handcrafted with love, using only the finest organic flour, farm-fresh eggs, and premium chocolate. We believe that a celebration without a cake is just a meeting!</p>
+        </div>
+        <div class="about-image">
+            <img src="https://thumbs.dreamstime.com/b/baker-kitchen-vector-illustration-happy-holding-breads-47137690.jpg" alt="Baker in the kitchen">
+        </div>
+    </section>
+
+    <section class="mission">
+        <div class="mission-content">
+            <h2>The Secret Ingredient is Always Love</h2>
+            <p>Our mission is to bring joy to your doorstep, one slice at a time. Whether it's a grand wedding or a quiet birthday at home, we make it special.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://st5.depositphotos.com/10539404/73620/i/450/depositphotos_736203316-stock-photo-happy-baker-standing-tray-bread.jpg" alt="Head Baker">
+                    <h3>Chef Harsh</h3>
+                    <p>Founder & Head Baker</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuhP3P6Ru7-1lLEUxCioz38vokaGzsH_-FKA&s" alt="Cake Designer">
+                    <h3>Shreya</h3>
+                    <p>Lead Cake Designer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 The Bake House. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
