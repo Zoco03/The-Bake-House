@@ -232,14 +232,49 @@ button a {
             </button>
         </form>
     </div>
-    <script>
-    document.getElementById("customForm").addEventListener("submit", function(event) {
+    <script>[22:31, 2/18/2026] Swaraj: document.getElementById("customForm").addEventListener("submit", function(event) {
 
-   <option value="">Select a flavor...</option>
+    const size = document.querySelector('input[name="size"]:checked');
+    const flavor = document.getElementById("flavor").value;
+    const date = document.getElementById("date").value;
+
+    if (!size || flavor === "" || date === "") {
+        event.preventDefault(); 
+        alert("Please fill all required details before placing your custom order.");
+    } else {
+        alert("Your custom cake request has been submitted successfully! 🎂");
+    }
+
+});
+[22:34, 2/18/2026] Harsh: <option value="">Select a flavor...</option>
+[22:39, 2/18/2026] Swaraj: <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const form = document.getElementById("customForm");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        const size = document.querySelector('input[name="size"]:checked');
+        const flavor = document.getElementById("flavor").value;
+        const date = document.getElementById("date").value;
+
+        if (!size || flavor === "" || date === "") {
+            alert("Please fill all required details before placing your custom order.");
+        } else {
+            alert("Your custom cake request has been submitted successfully! 🎂");
+
+            form.reset(); 
+        }
+    });
+
+});
+    
     </script>
     </body>
 
     </html>
+
 
 
 
